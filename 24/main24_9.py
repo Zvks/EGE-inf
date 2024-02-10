@@ -1,0 +1,6 @@
+f=open('24var05-08.txt')
+s= f.readline()
+f.close()
+s = s.replace('00', '0 0')
+s = s.split(' ')
+print( max(map(len, s)))   
