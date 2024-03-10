@@ -1,5 +1,4 @@
-from turtle import * # Подключим модуль черепашка
-
+from turtle import * # Подключим модуль черепашка 
 color('black','red') # устанавливаем цвет пера и цвет заливки
 speed(100)
 lt(90)
@@ -17,6 +16,7 @@ canvas = getcanvas()
 for x in range(-100*k,100*k,k):
     for y in range(-100*k,100*k,k):
         s = canvas.find_overlapping(x,y,x,y)
+        print(s)
         if len(s) == 1 and s[0] == 5: 
             cnt+=1
 print(cnt)
