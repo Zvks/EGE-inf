@@ -4,4 +4,4 @@ while x > 0:
     if x % 8 == 7:
          k += 1
     x = x // 8
-print  (k)
+print(k)

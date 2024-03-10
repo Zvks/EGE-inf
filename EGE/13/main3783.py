@@ -1,1 +1,2 @@
-print(126 * 255* 255 *255)
+print(bin(192))
+print(bin(208))
