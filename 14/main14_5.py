@@ -4,4 +4,4 @@ while x > 0:
     if x % 5 == 4:
          k += 1
     x = x // 5
-print  (k)
+print(k)

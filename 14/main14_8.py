@@ -4,5 +4,5 @@ while x > 0:
     if x % 11 == 10:
          k += 1
     x = x // 11
-print  (k)
+print(k)
 # 0 1 2 3 4 5 6 7 8 9 A
