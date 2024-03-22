@@ -1,9 +1,9 @@
-def f(n):
-    if n == 49:
+def f(x,y):
+    if x == y:
         return 1
-    elif n > 49:
+    elif x > y:
         return 0
     else:
-        return f(n+2) + f(n+7)
+        return f(x+2,y) + f(x+7,y)
 
-print(f(5))
+print(f(5,49))

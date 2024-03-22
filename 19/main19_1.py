@@ -29,9 +29,9 @@ def game(col_rocks, pl_position, v_hod1, v_hod2, v_hod3, winner): #р - пози
     return s
 
 path = "/home/user/Documents/EGE inf/19/19/19_type1.json"
-data = read_json(path)
+#data = read_json(path)
 
-for s in range(data['start_min'], data['winer']):
-    if game(s, 1, data['v_hod1'], data['v_hod2'], data['v_hod3'], data['winer']) == 1:
+for s in range(1, 202):
+    if game(s, 1,1,4,3,202) == 1:
         print(s)
         break

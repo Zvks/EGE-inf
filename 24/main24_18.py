@@ -1,18 +1,13 @@
-def pr(n): # функция, которая проверяет простое ли число
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            return False
-    return True
+f=open('C:\\Users\\user\\ege_inf\\EGE-inf\\24\\24\\24var18-20.txt')
+file = f.readline()
+f.close()
+max_len = 0
+counter = 1
+for i in range(1,len(file)):
+    if file[i-1]== file[i]:
+        counter +=1
+    else:
+        max_len = max(counter,max_len)
+        counter=1
 
-k=0
-x = 550001
-
-while k < 6:
-    for i in range (2, int(x**0.5)+1):
-        if x % i == 0:
-            D = x//i
-            if not(pr(D)):
-                k += 1
-                print (x, D)
-                break
-    x += 1
+print(max_len)

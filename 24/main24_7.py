@@ -1,18 +1,11 @@
-f=open('24var03.txt')
-p= f.readline()
+f=open('C:\\Users\\user\\ege_inf\\EGE-inf\\24\\24\\24var07.txt')
+file_list = f.readline()
 f.close()
-N = float('inf') #верхняя граница минимума
-
-for i in range(1,len(p)):
-    if p[i-1]+p[i] == 'AB': #начинаем поиск подпоследовательности со строки АВ 
-        k=1 #количество сочетаний АВ 
-        n=2 #количество символов
-        for j in range(i, len(p)-1):
-            n+=1
-            if p[j]+p[j+1] == 'AB':
-                k += 1
-            if k == 21:
-                N = min (n, N)
-                break         
-
-print(N)
+file_list = file_list.split('AB')
+file_list = list(map(len, file_list))
+M = 10**10
+for i in range(len(file_list)-21):
+    if M > sum(file_list[i:i+22]) + 44:
+        print(file_list[i:i+22])
+    M = min(M, sum(file_list[i:i+22]) + 2*22) # +22*2 так как AB не считается из-за split
+print(M)  

@@ -5,4 +5,4 @@ for A in range (0,100):
             OK *= not( (x < A) and (y < A) and (x*y > 1200))
 
     if OK: # истинность для любого х
-        print (A)
+        print (A, OK)

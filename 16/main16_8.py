@@ -33,9 +33,19 @@ def Func(n):
     return res
 
 path = "/home/user/Documents/EGE inf/16/16/16.json"
-data = read_json(path)
-s1 = Func(data['n1'])
-print(s1)
-#41518080
+#data = read_json(path)
+#s1 = Func(39)
+#print(s1)
+# 41518080
 # for i in range(1, 10):
-#     print(Gen())
+#      print(Gen())
+
+from functools import lru_cache
+@lru_cache
+
+def F(n):
+    if n < 3: return 1
+    if n > 2 and n % 2 == 1: return F(n - 1) - F(n - 2)
+    if n > 2 and n % 2 == 0: return sum(F(i) for i in range (1,n))  
+
+print(F(39))

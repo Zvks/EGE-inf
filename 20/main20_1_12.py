@@ -5,12 +5,6 @@
 — Петя не может выиграть за один ход;
 — Петя может выиграть своим вторым ходом независимо от того, как будет ходить Ваня. """
 
-import json
-def read_json(path):
-    with open(path, "r") as fh:
-        dict_ = json.load(fh)
-    return dict_
-
 def game(col_rocks, pl_position, v_hod1, v_hod2, v_hod3, winner): #р - позиция игрока. если четная, то значит, ход Вани, если нет - ход Пети 
     if pl_position == 4 and col_rocks >= winner:
         s = 1
@@ -30,11 +24,7 @@ def game(col_rocks, pl_position, v_hod1, v_hod2, v_hod3, winner): #р - пози
             s3 = game(col_rocks * v_hod3, pl_position + 1, v_hod1, v_hod2, v_hod3, winner) 
             s = s1 and s2 and s3
     return s
-
-path = "/home/user/Documents/EGE inf/20/20/20_type1.json"
-data = read_json(path)
-
-for s in range(data['start_min'], data['winer']):
-    if game(s, 1, data['v_hod1'], data['v_hod2'], data['v_hod3'], data['winer']) == 1:
+for s in range(1, 202):
+    if game(s, 1,1,4,3,202) == 1:
         print(s)
-        
+ 
